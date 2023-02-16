@@ -6,7 +6,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.IN) 
 import smtplib
-pb = Pushbullet("********")
+pb = Pushbullet("replace with your private token")
 
 def send_email1(user, pwd, recipient, subject, body):
     gmail_user = '*****@gmail.com'
@@ -34,14 +34,14 @@ def send_email1(user, pwd, recipient, subject, body):
 def send1():
     	send_email1('********@gmail.com', '******', 'firealertpi@gmail.com', 'Fire!!!', 'Building On Fire!!!')
     	
-
+#twilio_auth_token
 	account_sid = '*****'
 	auth_token = '*****'
 	client = Client(account_sid, auth_token)
 
 	call = client.calls.create(
                         	url='http://demo.twilio.com/docs/voice.xml',
-                        	to='+918330035029',
+                        	to='your number',
                         	from_='+12052369265'
                     	)
 
